@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+pydantic
+python-multipart
+aiofiles
+requests
+python-dotenv
+openai
+scikit-learn
+numpy
+psycopg2-binary
