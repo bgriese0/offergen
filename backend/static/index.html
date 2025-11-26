@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offergen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header p-3 text-white">
+      <div class="container">
+        <h1>Offergen</h1>
+      </div>
+    </header>
+
+    <main class="container my-4">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body bg-light">
+              <h5 class="card-title">Upload</h5>
+              <p class="card-text">Lade Dokumente hoch (txt, pdf als binary gespeichert).</p>
+              <input id="fileInput" type="file" class="form-control mb-2">
+              <button id="uploadBtn" class="btn btn-primary">Hochladen</button>
+              <div id="uploadMsg" class="mt-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body bg-white">
+              <h5 class="card-title">Dokumentenpflege</h5>
+              <p class="card-text">Liste der Dokumente in der Datenbank anzeigen und löschen.</p>
+              <button id="refreshDocs" class="btn btn-secondary mb-2">Aktualisieren</button>
+              <ul id="docList" class="list-group overflow-auto" style="max-height:300px;"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body bg-light">
+              <h5 class="card-title">Chatbot / Offer-Generator</h5>
+              <p class="card-text">Beschreibe, was du brauchst. Der Bot nutzt dein Dokumentenwissen.</p>
+              <textarea id="prompt" class="form-control mb-2" rows="4" placeholder="Z.B. Angebot für IT-Dienstleistung, 12 Monate Support..."></textarea>
+              <button id="askBtn" class="btn btn-success">Generieren</button>
+              <div id="answer" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="text-center p-3 small text-muted">
+      Offergen · lokal betrieben
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
