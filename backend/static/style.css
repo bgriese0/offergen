@@ -1,0 +1,11 @@
+.site-header {
+  background: #c82333; /* Bootstrap danger-ish red */
+  color: white;
+}
+body {
+  background: #f5f7fa; /* very light gray */
+}
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
